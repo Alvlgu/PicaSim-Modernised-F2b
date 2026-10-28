@@ -249,6 +249,9 @@ add_executable(PicaSim
     ${PICASIM_REPLAY_SOURCES}
     ${PICASIM_REPLAY_HEADERS}
 )
+set_property(TARGET PicaSim PROPERTY
+    VS_DEBUGGER_WORKING_DIRECTORY "${CMAKE_SOURCE_DIR}/data"
+)
 
 target_include_directories(PicaSim PRIVATE
     source/PicaSim
